@@ -11,11 +11,10 @@ class WeatherInfoBody extends StatefulWidget {
 
 class _WeatherInfoBodyState extends State<WeatherInfoBody> {
   bool isloading = true;
-  WeatherService weatherService = WeatherService();
   late WeatherModel weatherModel;
 
   fetchWeather() async {
-    weatherModel = await weatherService.getWeather(cityName: 'alexandria');
+    weatherModel = await WeatherService().getWeather(cityName: 'giza');
     isloading = false;
     setState(() {});
   }

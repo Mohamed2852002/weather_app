@@ -13,7 +13,9 @@ class SearchScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Center(
           child: TextField(
-            onSubmitted: (value) {},
+            onSubmitted: (value) async {
+              Navigator.pop(context);
+            },
             decoration: InputDecoration(
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 25, horizontal: 16),
@@ -30,3 +32,4 @@ class SearchScreen extends StatelessWidget {
     );
   }
 }
+

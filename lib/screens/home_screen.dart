@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/screens/search_screen.dart';
+import 'package:weather_app/widgets/no_weather_body.dart';
 import 'package:weather_app/widgets/weather_info_body.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +28,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const WeatherInfoBody(),
+      body:  const WeatherInfoBody()
     );
   }
 }
