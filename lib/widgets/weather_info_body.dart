@@ -15,7 +15,7 @@ class _WeatherInfoBodyState extends State<WeatherInfoBody> {
   late WeatherModel weatherModel;
 
   fetchWeather() async {
-    weatherModel = await weatherService.getWeather();
+    weatherModel = await weatherService.getWeather(cityName: 'alexandria');
     isloading = false;
     setState(() {});
   }

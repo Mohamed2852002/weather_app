@@ -5,6 +5,7 @@ class WeatherModel {
   final String cityName;
   final String condition;
   final String time;
+  final String? errorMessage;
 
   const WeatherModel({
     required this.avgTemp,
@@ -13,6 +14,7 @@ class WeatherModel {
     required this.time,
     required this.condition,
     required this.cityName,
+    this.errorMessage
   });
 
   factory WeatherModel.fromJson(json) {
