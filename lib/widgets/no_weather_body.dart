@@ -14,13 +14,13 @@ class NoWeatherBody extends StatelessWidget {
             Text(
               'there is no weather 😔 start',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 24,
               ),
             ),
             Text(
               'searching now 🔍',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 24,
               ),
             )
           ],
