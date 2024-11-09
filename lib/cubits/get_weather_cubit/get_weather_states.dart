@@ -1,4 +1,4 @@
-class WeatherState{}
+class WeatherState {}
 
 class NoWeatherState extends WeatherState {}
 
