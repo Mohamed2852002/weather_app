@@ -19,9 +19,11 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SearchScreen()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SearchScreen(),
+                ),
+              );
             },
             icon: const Icon(Icons.search),
           ),
@@ -32,7 +34,8 @@ class HomeScreen extends StatelessWidget {
           if (state is NoWeatherState) {
             return const NoWeatherBody();
           } else if (state is WeatherLoadedState) {
-            return  const WeatherInfoBody();
+            // ignore: prefer_const_constructors
+            return WeatherInfoBody();
           } else {
             return const WeatherFailureScreen();
           }

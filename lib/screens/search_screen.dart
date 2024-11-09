@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class SearchScreen extends StatelessWidget {
         title: const Text('Search City'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: 16.h),
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
@@ -22,12 +23,12 @@ class SearchScreen extends StatelessWidget {
             },
             decoration: InputDecoration(
               contentPadding:
-                  const EdgeInsets.symmetric(vertical: 25, horizontal: 16),
+                  EdgeInsets.symmetric(vertical: 24.h, horizontal: 16.w),
               suffixIcon: const Icon(Icons.search),
               label: const Text('Search'),
               hintText: 'Enter City Name',
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
               ),
             ),
           ),
