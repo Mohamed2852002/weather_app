@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/screens/search_screen.dart';
 
 class NoWeatherBody extends StatelessWidget {
@@ -6,26 +7,31 @@ class NoWeatherBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Center(
         child: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchScreen(),));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SearchScreen(),
+              ),
+            );
           },
-          child: const Column(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 'there is no weather 😔 start',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 24.sp,
                 ),
               ),
               Text(
                 'searching now 🔍',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 24.sp,
                 ),
               )
             ],
